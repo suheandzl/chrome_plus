@@ -387,34 +387,7 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wParam, LPARAM lParam)
         //    return 1;
         //}
 
-        if (wParam == WM_MOUSEWHEEL)
-        {
-            HWND hwnd = WindowFromPoint(pmouse->pt);
-            NodePtr TopContainerView = GetTopContainerView(hwnd);
-
-            PMOUSEHOOKSTRUCTEX pwheel = (PMOUSEHOOKSTRUCTEX)lParam;
-            int zDelta = GET_WHEEL_DELTA_WPARAM(pwheel->mouseData);
-
-            if (IsOnTheTab(TopContainerView, pmouse->pt) || IsPressed(VK_RBUTTON))
-            {
-                hwnd = GetTopWnd(hwnd);
-                if (zDelta > 0)
-                {
-                    ExecuteCommand(IDC_SELECT_PREVIOUS_TAB, hwnd);
-                }
-                else
-                {
-                    ExecuteCommand(IDC_SELECT_NEXT_TAB, hwnd);
-                }
-
-                wheel_tab_ing = true;
-                if (TopContainerView)
-                {
-                }
-                //DebugLog(L"WM_MOUSEWHEEL");
-                return 1;
-            }
-        }
+        
 
         if (wParam == WM_LBUTTONDBLCLK)
         {
