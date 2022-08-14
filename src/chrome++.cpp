@@ -37,7 +37,7 @@ void ChromePlus()
 
 void ChromePlusCommand(LPWSTR param)
 {
-    if (!wcsstr(param, L"--suheandzl"))
+    if (!wcsstr(param, L"--shuax"))
     {
         Portable(param);
     }
