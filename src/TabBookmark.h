@@ -367,12 +367,7 @@ LRESULT CALLBACK MouseProc(int nCode, WPARAM wParam, LPARAM lParam)
             goto next;
         }
 
-        if (wParam == WM_RBUTTONUP && wheel_tab_ing)
-        {
-            //DebugLog(L"wheel_tab_ing");
-            wheel_tab_ing = false;
-            return 1;
-        }
+       
 
 
         //if (wParam == WM_MBUTTONDOWN)
