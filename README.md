@@ -9,3 +9,7 @@
 Releases 页面自取
 # 安装
 dll放入解压版Chrome目录即可
+## 源项目
+[chromePlus](https://github.com/icy37785/chrome_plus)
+
+对此项目表示感谢
